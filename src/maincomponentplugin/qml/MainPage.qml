@@ -23,7 +23,7 @@ RowLayout {
         Layout.fillHeight: true
         Layout.fillWidth: true
         radius: Utils.listRadius
-        color: Utils.transparent
+        color: Utils.transparentBackground
         Loader {
             id: content
             anchors.fill: parent

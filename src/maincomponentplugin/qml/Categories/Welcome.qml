@@ -61,7 +61,7 @@ Item {
     }
 
     Rectangle {
-        color: Utils.transparent
+        color: Utils.transparentBackground
         anchors.bottom: parent.bottom
         x: Utils.margin
         width: parent.width - x * 2

@@ -11,5 +11,5 @@ QtObject {
     property int spacing: 5
     property int listRadius: 10
     property int categoryWidth: 200
-    property string transparent: 'transparent'
+    property string transparentBackground: 'transparent'
 }

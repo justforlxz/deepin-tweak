@@ -31,7 +31,7 @@ ListView {
         radius: Utils.listRadius
         height: row.height
         width: listView.width
-        color: Utils.transparent
+        color: Utils.transparentBackground
         Item {
             id: row
             width: listView.width
@@ -41,7 +41,7 @@ ListView {
                 hoverEnabled: true
                 onClicked: {
                     listView.currentIndex = index
-                    item.color = Utils.transparent
+                    item.color = Utils.transparentBackground
                 }
                 onEntered: {
                     if (listView.currentIndex === index) {
@@ -50,7 +50,7 @@ ListView {
                     item.color = palette.base
                 }
                 onExited: {
-                    item.color = Utils.transparent
+                    item.color = Utils.transparentBackground
                 }
             }
             RowLayout {

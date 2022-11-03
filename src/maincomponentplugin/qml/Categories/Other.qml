@@ -45,7 +45,7 @@ RowLayout {
             radius: Utils.listRadius
             height: 36
             width: listView.width
-            color: Utils.transparent
+            color: Utils.transparentBackground
             Item {
                 id: row
                 anchors.fill: parent
@@ -54,7 +54,7 @@ RowLayout {
                     hoverEnabled: true
                     onClicked: {
                         listView.currentIndex = index
-                        item.color = Utils.transparent
+                        item.color = Utils.transparentBackground
                     }
                     onEntered: {
                         if (listView.currentIndex === index) {
@@ -64,14 +64,14 @@ RowLayout {
                         item.color = palette.base
                     }
                     onExited: {
-                        item.color = Utils.transparent
+                        item.color = Utils.transparentBackground
                     }
                 }
                 RowLayout {
                     Layout.alignment: Qt.AlignVCenter
                     anchors.fill: parent
                     Rectangle {
-                        width: 10
+                        width: Utils.spacing * 2
                         visible: item.ListView.isCurrentItem
                     }
                     Image {
@@ -80,13 +80,13 @@ RowLayout {
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredWidth: 22
                         Layout.preferredHeight: 22
-                        Layout.leftMargin: 5
+                        Layout.leftMargin: Utils.spacing
                     }
                     Text {
                         id: displayName
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.fillWidth: true
-                        font.pixelSize: 12
+                        font: DTK.fontManager.t5
                     }
                     Loader {
                         id: _loader
